@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: gold;">
+
+    <div id="image-container">
+        <!-- The default image displayed when age is not provided or not valid -->
+        <img src="default-image.jpg" alt="Default Image">
+    </div>
+    
+    <script>
+        let a = Number(prompt("Enter your age: "));
+        let b = 17;
+
+        if (a > b) {
+            alert("You are an adult!");
+            var imageLink = `<a href="https://youtu.be/R0XYC9PfTZE">
+                <img src="Doraemon_character.png" alt="18+ Image"></a>`;
+            
+            document.getElementById("image-container").innerHTML = imageLink;
+        } else {
+            alert("You are a Minor!");
+            document.getElementById("image-container").innerHTML = '<img src="under18.jpg" alt="Under 18 Image">';
+        }
+    </script>
+</body>
+</html>
