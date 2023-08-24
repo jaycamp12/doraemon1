@@ -21,7 +21,13 @@
             var imageLink = `<a href="https://youtu.be/R0XYC9PfTZE">
                 <img src="Doraemon_character.png" alt="18+ Image"></a>`;
             
-            document.getElementById("image-container").innerHTML = imageLink;
+            var imageContainer = document.getElementById("image-container");
+            imageContainer.innerHTML = imageLink;
+
+            // Add text below the image
+            var clickText = document.createElement("p");
+            clickText.textContent = "Click Doraemon";
+            imageContainer.appendChild(clickText);
         } else {
             alert("You are a Minor!");
             document.getElementById("image-container").innerHTML = '<img src="under18.jpg" alt="Under 18 Image">';
